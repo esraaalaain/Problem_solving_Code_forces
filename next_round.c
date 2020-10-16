@@ -5,14 +5,35 @@
 
     int main()
     {
-        int score,players ,advancers[50],count=0,count2=0,temp=0,count3,i;
-        scanf("%d %d",&players,&score);
-        for ( i = 0; i < players; i++)
-        {   
-             scanf("%d",advancers[i]);
-        }
-        
-        
-        printf("%d",advancers[score]);
+        int Score,players,i,count=0,count2=0;
+        int advancers[50];
+        scanf("%d %d",&players,&Score);
 
+        for ( i = 1; i <= players; i++)
+        {   
+             scanf("%d",&advancers[i]);
+            
+        }//array 
+
+        for (int j = 1; j <= players; j++)
+        {
+           if (advancers[j] >= advancers[Score]&&advancers[j]!=0)
+           {
+               count++;
+           }
+          else if (count==0 && advancers[j] <=advancers[Score] && advancers[j]!=0 )
+           {
+               count2++;
+           }
+           
+        }
+       if (count==0)
+        {
+            count=count2;
+        }
+
+         printf("%d",count);
+                 
+
+        return 0;
     }
