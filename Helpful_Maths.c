@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 
 void BUBBLE_SORT(char * DATA , char N)
 {
@@ -35,7 +35,7 @@ void BUBBLE_SORT(char * DATA , char N)
  int main()
 {   
     char str[1000], c_str[1000];
-    int len,i,y,j,m=0,k=0;
+    int len,i,y,j,m=0;
     scanf("%s",&str);
     len = strlen(str);
     BUBBLE_SORT(str,len);
